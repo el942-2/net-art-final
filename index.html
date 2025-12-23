@@ -9,87 +9,142 @@
 
 <body>
 
-  <div id="noise"></div>
+  <div class="ornament top-left">影</div>
+  <div class="ornament top-right">道</div>
+  <div class="ornament bottom-left">夜</div>
+  <div class="ornament bottom-right">静</div>
 
-  <main id="field">
+  <main id="stage">
 
-    <section class="node active" id="start">
-      <p class="primary">You are already inside the city.</p>
-      <p class="secondary">You just forgot when you entered.</p>
+    <section class="panel active" id="start">
+      <div class="frame">
+        <h1>Path of Shadows</h1>
+        <div class="divider"></div>
 
-      <a data-target="alley">follow the narrow path</a>
-      <a data-target="rooftop">move above the noise</a>
+        <p class="main">You are already inside the city.</p>
+        <p class="sub">Entry is never remembered.</p>
+
+        <nav>
+          <a data-target="alley">enter the alley</a>
+          <a data-target="rooftop">climb the roofs</a>
+        </nav>
+      </div>
     </section>
 
-    <section class="node" id="alley">
-      <p class="primary">Walls press inward.</p>
-      <p class="secondary">Paper, wood, breath.</p>
+    <section class="panel" id="alley">
+      <div class="frame">
+        <span class="sigil">•••</span>
 
-      <a data-target="hide">disappear</a>
-      <a data-target="marks">trace the markings</a>
+        <p class="main">Walls lean closer.</p>
+        <p class="sub">Paper, wood, breath.</p>
+
+        <nav>
+          <a data-target="hide">disappear</a>
+          <a data-target="marks">follow the marks</a>
+        </nav>
+      </div>
     </section>
 
-    <section class="node" id="rooftop">
-      <p class="primary">The city flattens.</p>
-      <p class="secondary">Lanterns become coordinates.</p>
+    <section class="panel" id="rooftop">
+      <div class="frame">
+        <span class="sigil">△ △ △</span>
 
-      <a data-target="observe">observe</a>
-      <a data-target="fall">step off</a>
+        <p class="main">The city flattens beneath you.</p>
+        <p class="sub">Lanterns become coordinates.</p>
+
+        <nav>
+          <a data-target="observe">observe below</a>
+          <a data-target="fall">step into air</a>
+        </nav>
+      </div>
     </section>
 
-    <section class="node" id="hide">
-      <p class="primary">Stillness sharpens.</p>
-      <p class="secondary">You are not gone. You are folded.</p>
+    <section class="panel" id="hide">
+      <div class="frame">
+        <span class="sigil">□</span>
 
-      <a data-target="start">wait</a>
-      <a data-target="marks">move again</a>
+        <p class="main">Stillness sharpens.</p>
+        <p class="sub">You are folded, not gone.</p>
+
+        <nav>
+          <a data-target="start">wait</a>
+          <a data-target="marks">move again</a>
+        </nav>
+      </div>
     </section>
 
-    <section class="node" id="observe">
-      <p class="primary">Movement without bodies.</p>
-      <p class="secondary">Shadows practicing independence.</p>
+    <section class="panel" id="observe">
+      <div class="frame">
+        <span class="sigil">◯ ◯</span>
 
-      <a data-target="marks">descend</a>
-      <a data-target="rooftop">remain above</a>
+        <p class="main">Movement without bodies.</p>
+        <p class="sub">Shadows rehearse.</p>
+
+        <nav>
+          <a data-target="marks">descend</a>
+          <a data-target="rooftop">remain above</a>
+        </nav>
+      </div>
     </section>
 
-    <section class="node" id="fall">
-      <p class="primary">Gravity remembers you.</p>
-      <p class="secondary glitch">So does the ground.</p>
+    <section class="panel" id="fall">
+      <div class="frame">
+        <span class="sigil glitch">✕</span>
 
-      <a data-target="marks">land</a>
+        <p class="main">Gravity remembers.</p>
+        <p class="sub">So does the ground.</p>
+
+        <nav>
+          <a data-target="marks">land</a>
+        </nav>
+      </div>
     </section>
 
-    <section class="node" id="marks">
-      <p class="primary long">
-        Symbols repeat along the walls.<br>
-        Not instructions.<br>
-        Evidence.
-      </p>
+    <section class="panel" id="marks">
+      <div class="frame wide">
+        <span class="sigil">≡ ≡ ≡</span>
 
-      <p class="secondary">
-        Someone else has passed through this exact moment.
-      </p>
+        <p class="main">
+          Symbols repeat along the walls.<br>
+          Not instructions.<br>
+          Evidence.
+        </p>
 
-      <a data-target="scroll">unroll the scroll</a>
-      <a data-target="alley">turn back</a>
+        <p class="sub">
+          Someone else has passed through this moment.
+        </p>
+
+        <nav>
+          <a data-target="scroll">unroll the scroll</a>
+          <a data-target="alley">turn back</a>
+        </nav>
+      </div>
     </section>
 
-    <section class="node" id="scroll">
-      <p class="primary long">
-        The scroll resists clarity.<br><br>
-        It records hesitation, not direction.<br>
-        Each fold marks a decision you believed was yours.
-      </p>
+    <section class="panel" id="scroll">
+      <div class="frame wide">
+        <span class="sigil">巻</span>
 
-      <a data-target="void">read until it empties</a>
-      <a data-target="start">close it</a>
+        <p class="main">
+          The scroll records hesitation.<br><br>
+          Each fold marks a decision you believed was yours.
+        </p>
+
+        <nav>
+          <a data-target="void">read until empty</a>
+          <a data-target="start">close the scroll</a>
+        </nav>
+      </div>
     </section>
 
-    <section class="node void" id="void">
-      <p class="primary glitch"> </p>
+    <section class="panel void" id="void">
+      <div class="frame">
+        <p class="main glitch"> </p>
 
-      <a data-target="start">begin again</a>
+        <nav>
+          <a data-target="start">begin again</a>
+        </nav>
+      </div>
     </section>
 
   </main>
