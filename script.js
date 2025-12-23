@@ -4,15 +4,14 @@ const nodes = document.querySelectorAll(".node");
 links.forEach(link => {
   link.addEventListener("click", e => {
     e.preventDefault();
-    const targetId = link.getAttribute("data-target");
 
-    nodes.forEach(node => {
-      node.classList.remove("active");
-    });
+    const target = link.dataset.target;
 
-    const targetNode = document.getElementById(targetId);
-    if (targetNode) {
-      targetNode.classList.add("active");
+    nodes.forEach(n => n.classList.remove("active"));
+
+    const next = document.getElementById(target);
+    if (next) {
+      next.classList.add("active");
       window.scrollTo(0, 0);
     }
   });
