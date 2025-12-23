@@ -1,114 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Path of Shadows</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <main class="container">
 
-    <section id="node-start" class="node active">
-      <p>You move without sound.<br>The path is never straight.</p>
+  <div id="noise"></div>
 
-      <nav>
-        <a href="#" data-target="node-alley">Enter the alley</a>
-        <a href="#" data-target="node-rooftop">Climb upward</a>
-      </nav>
+  <main id="field">
+
+    <section class="node active" id="start">
+      <p class="primary">You are already inside the city.</p>
+      <p class="secondary">You just forgot when you entered.</p>
+
+      <a data-target="alley">follow the narrow path</a>
+      <a data-target="rooftop">move above the noise</a>
     </section>
 
-    <section id="node-alley" class="node">
-      <p>
-        The alley narrows.<br>
-        Paper walls breathe in the dark.
+    <section class="node" id="alley">
+      <p class="primary">Walls press inward.</p>
+      <p class="secondary">Paper, wood, breath.</p>
+
+      <a data-target="hide">disappear</a>
+      <a data-target="marks">trace the markings</a>
+    </section>
+
+    <section class="node" id="rooftop">
+      <p class="primary">The city flattens.</p>
+      <p class="secondary">Lanterns become coordinates.</p>
+
+      <a data-target="observe">observe</a>
+      <a data-target="fall">step off</a>
+    </section>
+
+    <section class="node" id="hide">
+      <p class="primary">Stillness sharpens.</p>
+      <p class="secondary">You are not gone. You are folded.</p>
+
+      <a data-target="start">wait</a>
+      <a data-target="marks">move again</a>
+    </section>
+
+    <section class="node" id="observe">
+      <p class="primary">Movement without bodies.</p>
+      <p class="secondary">Shadows practicing independence.</p>
+
+      <a data-target="marks">descend</a>
+      <a data-target="rooftop">remain above</a>
+    </section>
+
+    <section class="node" id="fall">
+      <p class="primary">Gravity remembers you.</p>
+      <p class="secondary glitch">So does the ground.</p>
+
+      <a data-target="marks">land</a>
+    </section>
+
+    <section class="node" id="marks">
+      <p class="primary long">
+        Symbols repeat along the walls.<br>
+        Not instructions.<br>
+        Evidence.
       </p>
 
-      <nav>
-        <a href="#" data-target="node-hide">Hide</a>
-        <a href="#" data-target="node-forward">Move forward</a>
-      </nav>
-    </section>
-
-    <section id="node-rooftop" class="node">
-      <p>
-        Above the city,<br>
-        the night opens like ink in water.
+      <p class="secondary">
+        Someone else has passed through this exact moment.
       </p>
 
-      <nav>
-        <a href="#" data-target="node-observe">Observe below</a>
-        <a href="#" data-target="node-jump">Jump</a>
-      </nav>
+      <a data-target="scroll">unroll the scroll</a>
+      <a data-target="alley">turn back</a>
     </section>
 
-    <section id="node-hide" class="node">
-      <p>
-        Stillness becomes armor.<br>
-        Time forgets you.
+    <section class="node" id="scroll">
+      <p class="primary long">
+        The scroll resists clarity.<br><br>
+        It records hesitation, not direction.<br>
+        Each fold marks a decision you believed was yours.
       </p>
 
-      <nav>
-        <a href="#" data-target="node-start">Remain hidden</a>
-        <a href="#" data-target="node-forward">Break cover</a>
-      </nav>
+      <a data-target="void">read until it empties</a>
+      <a data-target="start">close it</a>
     </section>
 
-    <section id="node-forward" class="node">
-      <p>
-        Every step feels chosen.<br>
-        Every choice was already made.
-      </p>
+    <section class="node void" id="void">
+      <p class="primary glitch"> </p>
 
-      <nav>
-        <a href="#" data-target="node-scroll">Follow the markings</a>
-        <a href="#" data-target="node-alley">Turn back</a>
-      </nav>
-    </section>
-
-    <section id="node-observe" class="node">
-      <p>
-        Lanterns flicker.<br>
-        Shadows move where bodies do not.
-      </p>
-
-      <nav>
-        <a href="#" data-target="node-scroll">Descend quietly</a>
-        <a href="#" data-target="node-rooftop">Stay above</a>
-      </nav>
-    </section>
-
-    <section id="node-jump" class="node">
-      <p>
-        Falling feels like flight<br>
-        until it doesn't.
-      </p>
-
-      <nav>
-        <a href="#" data-target="node-scroll">Land</a>
-      </nav>
-    </section>
-
-    <section id="node-scroll" class="node">
-      <p class="long">
-        The scroll is not a map.<br><br>
-        It does not tell you where to go.<br>
-        It reminds you where you have already been.
-      </p>
-
-      <nav>
-        <a href="#" data-target="node-empty">Read further</a>
-        <a href="#" data-target="node-start">Close the scroll</a>
-      </nav>
-    </section>
-
-    <section id="node-empty" class="node empty">
-      <p> </p>
-
-      <nav>
-        <a href="#" data-target="node-start">Begin again</a>
-      </nav>
+      <a data-target="start">begin again</a>
     </section>
 
   </main>
