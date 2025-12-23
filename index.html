@@ -5,146 +5,108 @@
   <title>Path of Shadows</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="ornament top-left">影</div>
-  <div class="ornament top-right">道</div>
-  <div class="ornament bottom-left">夜</div>
-  <div class="ornament bottom-right">静</div>
+  <div class="stars"></div>
+  <div class="stars stars2"></div>
+  <div class="stars stars3"></div>
 
-  <main id="stage">
+  <main id="container">
 
-    <section class="panel active" id="start">
-      <div class="frame">
-        <h1>Path of Shadows</h1>
-        <div class="divider"></div>
+    <section class="node active" id="start">
+      <p>You are already inside the city.</p>
+      <p class="soft">Entry is never remembered.</p>
 
-        <p class="main">You are already inside the city.</p>
-        <p class="sub">Entry is never remembered.</p>
-
-        <nav>
-          <a data-target="alley">enter the alley</a>
-          <a data-target="rooftop">climb the roofs</a>
-        </nav>
-      </div>
+      <nav>
+        <a data-target="alley">enter the alley</a>
+        <a data-target="rooftop">climb the roofs</a>
+      </nav>
     </section>
 
-    <section class="panel" id="alley">
-      <div class="frame">
-        <span class="sigil">•••</span>
+    <section class="node" id="alley">
+      <p>The walls narrow.</p>
+      <p class="soft">Paper. Wood. Breath.</p>
 
-        <p class="main">Walls lean closer.</p>
-        <p class="sub">Paper, wood, breath.</p>
-
-        <nav>
-          <a data-target="hide">disappear</a>
-          <a data-target="marks">follow the marks</a>
-        </nav>
-      </div>
+      <nav>
+        <a data-target="hide">hide</a>
+        <a data-target="marks">follow the markings</a>
+      </nav>
     </section>
 
-    <section class="panel" id="rooftop">
-      <div class="frame">
-        <span class="sigil">△ △ △</span>
+    <section class="node" id="rooftop">
+      <p>The city becomes quiet.</p>
+      <p class="soft">Lanterns drift like stars below.</p>
 
-        <p class="main">The city flattens beneath you.</p>
-        <p class="sub">Lanterns become coordinates.</p>
-
-        <nav>
-          <a data-target="observe">observe below</a>
-          <a data-target="fall">step into air</a>
-        </nav>
-      </div>
+      <nav>
+        <a data-target="observe">observe</a>
+        <a data-target="fall">step forward</a>
+      </nav>
     </section>
 
-    <section class="panel" id="hide">
-      <div class="frame">
-        <span class="sigil">□</span>
+    <section class="node" id="hide">
+      <p>Stillness sharpens.</p>
+      <p class="soft">You are folded into shadow.</p>
 
-        <p class="main">Stillness sharpens.</p>
-        <p class="sub">You are folded, not gone.</p>
-
-        <nav>
-          <a data-target="start">wait</a>
-          <a data-target="marks">move again</a>
-        </nav>
-      </div>
+      <nav>
+        <a data-target="start">wait</a>
+        <a data-target="marks">move again</a>
+      </nav>
     </section>
 
-    <section class="panel" id="observe">
-      <div class="frame">
-        <span class="sigil">◯ ◯</span>
+    <section class="node" id="observe">
+      <p>Movement without bodies.</p>
+      <p class="soft">Shadows detach and wander.</p>
 
-        <p class="main">Movement without bodies.</p>
-        <p class="sub">Shadows rehearse.</p>
-
-        <nav>
-          <a data-target="marks">descend</a>
-          <a data-target="rooftop">remain above</a>
-        </nav>
-      </div>
+      <nav>
+        <a data-target="marks">descend</a>
+        <a data-target="rooftop">remain above</a>
+      </nav>
     </section>
 
-    <section class="panel" id="fall">
-      <div class="frame">
-        <span class="sigil glitch">✕</span>
+    <section class="node" id="fall">
+      <p>Gravity remembers you.</p>
 
-        <p class="main">Gravity remembers.</p>
-        <p class="sub">So does the ground.</p>
-
-        <nav>
-          <a data-target="marks">land</a>
-        </nav>
-      </div>
+      <nav>
+        <a data-target="marks">land</a>
+      </nav>
     </section>
 
-    <section class="panel" id="marks">
-      <div class="frame wide">
-        <span class="sigil">≡ ≡ ≡</span>
+    <section class="node" id="marks">
+      <p>
+        Symbols repeat along the walls.<br>
+        Not instructions.<br>
+        Evidence.
+      </p>
 
-        <p class="main">
-          Symbols repeat along the walls.<br>
-          Not instructions.<br>
-          Evidence.
-        </p>
-
-        <p class="sub">
-          Someone else has passed through this moment.
-        </p>
-
-        <nav>
-          <a data-target="scroll">unroll the scroll</a>
-          <a data-target="alley">turn back</a>
-        </nav>
-      </div>
+      <nav>
+        <a data-target="scroll">unroll the scroll</a>
+        <a data-target="alley">turn back</a>
+      </nav>
     </section>
 
-    <section class="panel" id="scroll">
-      <div class="frame wide">
-        <span class="sigil">巻</span>
+    <section class="node" id="scroll">
+      <p>
+        The scroll records hesitation.<br><br>
+        Each fold marks a decision you believed was yours.
+      </p>
 
-        <p class="main">
-          The scroll records hesitation.<br><br>
-          Each fold marks a decision you believed was yours.
-        </p>
-
-        <nav>
-          <a data-target="void">read until empty</a>
-          <a data-target="start">close the scroll</a>
-        </nav>
-      </div>
+      <nav>
+        <a data-target="void">read until empty</a>
+        <a data-target="start">close the scroll</a>
+      </nav>
     </section>
 
-    <section class="panel void" id="void">
-      <div class="frame">
-        <p class="main glitch"> </p>
+    <section class="node" id="void">
+      <p class="soft"> </p>
 
-        <nav>
-          <a data-target="start">begin again</a>
-        </nav>
-      </div>
+      <nav>
+        <a data-target="start">begin again</a>
+      </nav>
     </section>
 
   </main>
