@@ -12,6 +12,7 @@
 
 <body>
 
+  <!-- STAR BACKGROUND -->
   <div class="stars"></div>
   <div class="stars stars2"></div>
   <div class="stars stars3"></div>
@@ -19,90 +20,113 @@
   <main id="container">
 
     <section class="node active" id="start">
-      <p>You are already inside the city.</p>
-      <p class="soft">Entry is never remembered.</p>
+      <p>You move through the city unseen.</p>
+      <p class="soft">
+        Your mission began before nightfall.<br>
+        The target lies somewhere ahead.
+      </p>
 
       <nav>
-        <a data-target="alley">enter the alley</a>
-        <a data-target="rooftop">climb the roofs</a>
+        <a data-target="alley">slip into the alley</a>
+        <a data-target="rooftop">take the rooftops</a>
       </nav>
     </section>
 
     <section class="node" id="alley">
-      <p>The walls narrow.</p>
-      <p class="soft">Paper. Wood. Breath.</p>
+      <p>The alley smells of rain and ash.</p>
+      <p class="soft">
+        Paper walls tremble as guards pass nearby.
+      </p>
 
       <nav>
-        <a data-target="hide">hide</a>
-        <a data-target="marks">follow the markings</a>
+        <a data-target="hide">press into shadow</a>
+        <a data-target="marks">move deeper</a>
       </nav>
     </section>
 
     <section class="node" id="rooftop">
-      <p>The city becomes quiet.</p>
-      <p class="soft">Lanterns drift like stars below.</p>
+      <p>You balance above the streets.</p>
+      <p class="soft">
+        Tiles cool beneath your feet.<br>
+        Lanterns drift like false stars.
+      </p>
 
       <nav>
-        <a data-target="observe">observe</a>
-        <a data-target="fall">step forward</a>
+        <a data-target="observe">observe the patrols</a>
+        <a data-target="fall">drop between buildings</a>
       </nav>
     </section>
 
     <section class="node" id="hide">
-      <p>Stillness sharpens.</p>
-      <p class="soft">You are folded into shadow.</p>
+      <p>You hold your breath.</p>
+      <p class="soft">
+        A guard pauses.<br>
+        Then moves on.
+      </p>
 
       <nav>
-        <a data-target="start">wait</a>
-        <a data-target="marks">move again</a>
+        <a data-target="start">wait longer</a>
+        <a data-target="marks">continue forward</a>
       </nav>
     </section>
 
     <section class="node" id="observe">
-      <p>Movement without bodies.</p>
-      <p class="soft">Shadows detach and wander.</p>
+      <p>You memorize movement.</p>
+      <p class="soft">
+        Routes. Timings. Weak points.
+      </p>
 
       <nav>
-        <a data-target="marks">descend</a>
-        <a data-target="rooftop">remain above</a>
+        <a data-target="marks">descend quietly</a>
+        <a data-target="rooftop">stay above</a>
       </nav>
     </section>
 
     <section class="node" id="fall">
-      <p>Gravity remembers you.</p>
+      <p>You drop without sound.</p>
+      <p class="soft">
+        The landing stings — but holds.
+      </p>
 
       <nav>
-        <a data-target="marks">land</a>
+        <a data-target="marks">advance</a>
       </nav>
     </section>
 
     <section class="node" id="marks">
       <p>
-        Symbols repeat along the walls.<br>
-        Not instructions.<br>
-        Evidence.
+        Symbols are carved into the walls.<br>
+        Old signals. Clan markings.
+      </p>
+
+      <p class="soft">
+        Someone from your order has already passed through.
       </p>
 
       <nav>
-        <a data-target="scroll">unroll the scroll</a>
-        <a data-target="alley">turn back</a>
+        <a data-target="scroll">read the scroll</a>
+        <a data-target="alley">change route</a>
       </nav>
     </section>
 
     <section class="node" id="scroll">
       <p>
-        The scroll records hesitation.<br><br>
-        Each fold marks a decision you believed was yours.
+        The scroll does not name the target.<br><br>
+        It records decisions made under moonlight —<br>
+        routes taken, routes abandoned.
       </p>
 
       <nav>
-        <a data-target="void">read until empty</a>
-        <a data-target="start">close the scroll</a>
+        <a data-target="void">read until it ends</a>
+        <a data-target="start">seal the scroll</a>
       </nav>
     </section>
 
     <section class="node" id="void">
-      <p class="soft"> </p>
+      <p class="soft">
+        The mission continues.<br>
+        It always does.
+      </p>
 
       <nav>
         <a data-target="start">begin again</a>
