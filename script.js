@@ -1,13 +1,12 @@
 const links = document.querySelectorAll("a[data-target]");
-const panels = document.querySelectorAll(".panel");
+const nodes = document.querySelectorAll(".node");
 
 links.forEach(link => {
   link.addEventListener("click", e => {
     e.preventDefault();
-
     const target = link.dataset.target;
 
-    panels.forEach(p => p.classList.remove("active"));
+    nodes.forEach(n => n.classList.remove("active"));
 
     const next = document.getElementById(target);
     if (next) {
