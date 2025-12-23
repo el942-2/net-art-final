@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Path of Shadows</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+
+    <section id="node-start" class="node active">
+      <p>You move without sound.<br>The path is never straight.</p>
+
+      <nav>
+        <a href="#" data-target="node-alley">Enter the alley</a>
+        <a href="#" data-target="node-rooftop">Climb upward</a>
+      </nav>
+    </section>
+
+    <section id="node-alley" class="node">
+      <p>
+        The alley narrows.<br>
+        Paper walls breathe in the dark.
+      </p>
+
+      <nav>
+        <a href="#" data-target="node-hide">Hide</a>
+        <a href="#" data-target="node-forward">Move forward</a>
+      </nav>
+    </section>
+
+    <section id="node-rooftop" class="node">
+      <p>
+        Above the city,<br>
+        the night opens like ink in water.
+      </p>
+
+      <nav>
+        <a href="#" data-target="node-observe">Observe below</a>
+        <a href="#" data-target="node-jump">Jump</a>
+      </nav>
+    </section>
+
+    <section id="node-hide" class="node">
+      <p>
+        Stillness becomes armor.<br>
+        Time forgets you.
+      </p>
+
+      <nav>
+        <a href="#" data-target="node-start">Remain hidden</a>
+        <a href="#" data-target="node-forward">Break cover</a>
+      </nav>
+    </section>
+
+    <section id="node-forward" class="node">
+      <p>
+        Every step feels chosen.<br>
+        Every choice was already made.
+      </p>
+
+      <nav>
+        <a href="#" data-target="node-scroll">Follow the markings</a>
+        <a href="#" data-target="node-alley">Turn back</a>
+      </nav>
+    </section>
+
+    <section id="node-observe" class="node">
+      <p>
+        Lanterns flicker.<br>
+        Shadows move where bodies do not.
+      </p>
+
+      <nav>
+        <a href="#" data-target="node-scroll">Descend quietly</a>
+        <a href="#" data-target="node-rooftop">Stay above</a>
+      </nav>
+    </section>
+
+    <section id="node-jump" class="node">
+      <p>
+        Falling feels like flight<br>
+        until it doesn't.
+      </p>
+
+      <nav>
+        <a href="#" data-target="node-scroll">Land</a>
+      </nav>
+    </section>
+
+    <section id="node-scroll" class="node">
+      <p class="long">
+        The scroll is not a map.<br><br>
+        It does not tell you where to go.<br>
+        It reminds you where you have already been.
+      </p>
+
+      <nav>
+        <a href="#" data-target="node-empty">Read further</a>
+        <a href="#" data-target="node-start">Close the scroll</a>
+      </nav>
+    </section>
+
+    <section id="node-empty" class="node empty">
+      <p> </p>
+
+      <nav>
+        <a href="#" data-target="node-start">Begin again</a>
+      </nav>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
